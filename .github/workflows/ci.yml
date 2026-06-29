@@ -1,3 +1,5 @@
+#to build and push docker image(devboard frontend master branch)
+
 name: ci
 
 on:
