@@ -1,4 +1,4 @@
-#Goal - to build and push devboard frontend image of master branch
+#Goal - to build and push devboard frontend image of master branch.
 name: ci
 
 on:
