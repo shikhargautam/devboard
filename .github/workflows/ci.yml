@@ -3,16 +3,13 @@ name: ci
 
 on:
     workflow_dispatch:
-
-   # push:
-   #   branches:  [master]
   
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Check username
         run: echo "Username: ${{ vars.DOCKER_USERNAME }}"
