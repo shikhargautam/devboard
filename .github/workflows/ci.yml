@@ -1,12 +1,12 @@
-#Goal - to build and push devboard frontend image of master branch.
 name: ci
 
 on:
-    workflow_dispatch:
-  
+  workflow_dispatch:
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,7 +22,8 @@ jobs:
 
       - name: Build and Push image
         uses: docker/build-push-action@v7
-        with: 
+        with:
+          context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/devboard-fe-master:latest
-    
+          tags: |
+            ${{ vars.DOCKER_USERNAME }}/devboard-fe-master:latest
