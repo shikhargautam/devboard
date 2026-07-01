@@ -30,6 +30,7 @@ on:
         password: ${{ secrets.DOCKER_TOKEN }}
 
     - name: Deploy docker container with docker compose
+      working-directory: devboard
       run: |
-      docker compose pull
-      docker compose up -d
+        docker compose pull
+        docker compose up -d
