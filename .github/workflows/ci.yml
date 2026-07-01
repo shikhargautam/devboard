@@ -41,8 +41,9 @@ jobs:
 
       - name: Docker build and push
         uses: docker/build-push-action@v7
-        working-directory: frontend
         with:
+          context: frontend
+          file: frontend/Dockerfile
           push: true
           tags: ${{ vars.DOCKER_USERNAME }}/devboard-fe-advanced:latest
 
