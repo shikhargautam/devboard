@@ -85,7 +85,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: backend
-          file: Dockerfile
+          file: backend/Dockerfile
           push: true
           tags: ${{ vars.DOCKER_USERNAME }}/devboard-be-advanced:latest
 
