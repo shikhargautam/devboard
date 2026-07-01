@@ -10,7 +10,7 @@ on:
 jobs:
   frontend:
     runs-on: ubuntu-latest
-    Steps:
+    steps:
       - name: Checkout code
         uses: actions/Checkout@v7
 
