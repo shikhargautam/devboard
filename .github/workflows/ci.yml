@@ -94,6 +94,7 @@ jobs:
       - backend
 
     uses: ./.github/workflows/CD.yml
+    secrets: inherit
 
 
  
