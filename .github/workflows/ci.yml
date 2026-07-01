@@ -93,7 +93,7 @@ jobs:
       - frontend
       - backend
 
-    uses: ./.github/workflows/CD.yml
+    uses: C:\Users\HP\Documents\GitHub-Actions\devboard\.github\workflows\CD.yml
     secrets: inherit
 
 
