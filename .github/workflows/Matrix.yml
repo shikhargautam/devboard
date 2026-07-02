@@ -1,5 +1,3 @@
-# Linting Go language code with multiple versions:
-
 name: Matrix
 
 on:
@@ -8,7 +6,7 @@ on:
 jobs:
   Linting:
     strategy:
-      fail-fast: true # isse agr ek version se fail hogya to job nhi rukegi
+      fail-fast: true
       matrix:
         go-versions: ['1.22', '1.23', '1.24']
 
@@ -16,13 +14,12 @@ jobs:
 
     steps:
       - name: Checkout Conde
-        uses: actions/Checkout@v7
+        uses: actions/checkout@v4
 
       - name: Setup Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v5
         with:
-          go-version: ${{matrix.go-versions}}
-          #go-version-file: 'go.mod'
+          go-version: ${{ matrix.go-versions }}
           cache: true
 
       - name: Go Formatter
