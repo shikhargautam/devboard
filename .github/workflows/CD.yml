@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Deploy application using Docker Compose
-        working-directory: devboard
+        #working-directory: devboard
         run: |
           docker compose pull
           docker compose up -d
